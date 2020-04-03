@@ -9,7 +9,8 @@ class SolutionTest {
 
     @Test
     void longestPalindrome() {
-        assertEquals("bab", solution.longestPalindrome("babad"));
+        assertEquals("ddtattarrattatdd", solution.longestPalindrome("babaddtattarrattatddetartrateedredividerb"));
+//        assertEquals("bab", solution.longestPalindrome("babad"));
         assertEquals("babab", solution.longestPalindrome("babab"));
         assertEquals("bb", solution.longestPalindrome("cbbd"));
         assertEquals("aa", solution.longestPalindrome("aa"));

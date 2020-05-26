@@ -11,5 +11,6 @@ class SolutionTest {
     void superEggDrop() {
         assertEquals(2, solution.superEggDrop(1, 2));
         assertEquals(4, solution.superEggDrop(3, 14));
+        assertEquals(2, solution.superEggDrop(2, 3));
     }
 }

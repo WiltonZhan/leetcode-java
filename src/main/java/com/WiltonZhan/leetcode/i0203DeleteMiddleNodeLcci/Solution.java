@@ -1,4 +1,4 @@
-package com.WiltonZhan.leetcode.i02or03DeleteMiddleNodeLcci;
+package com.WiltonZhan.leetcode.i0203DeleteMiddleNodeLcci;
 
 /*
 面试题 02.03. 删除中间节点

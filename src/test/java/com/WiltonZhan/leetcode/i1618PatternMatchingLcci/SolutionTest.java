@@ -1,4 +1,4 @@
-package com.WiltonZhan.leetcode.i16or18PatternMatchingLcci;
+package com.WiltonZhan.leetcode.i1618PatternMatchingLcci;
 
 import org.junit.jupiter.api.Test;
 

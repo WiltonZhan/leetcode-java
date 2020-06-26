@@ -1,4 +1,4 @@
-package com.WiltonZhan.leetcode.i17or19MissingTwoLcci;
+package com.WiltonZhan.leetcode.i1719MissingTwoLcci;
 
 /*
 面试题 17.19. 消失的两个数字

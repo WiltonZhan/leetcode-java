@@ -1,4 +1,4 @@
-package com.WiltonZhan.leetcode.i16or18PatternMatchingLcci;
+package com.WiltonZhan.leetcode.i1618PatternMatchingLcci;
 
 /*
 面试题 16.18. 模式匹配

@@ -1,4 +1,4 @@
-package com.WiltonZhan.leetcode.i17or19MissingTwoLcci;
+package com.WiltonZhan.leetcode.i1719MissingTwoLcci;
 
 import org.junit.jupiter.api.Test;
 

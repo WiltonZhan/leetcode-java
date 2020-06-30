@@ -1,6 +1,9 @@
 package com.WiltonZhan.leetcode.l215KthLargestElementInAnArray;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 /*
 在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。
@@ -18,7 +21,10 @@ import java.util.Arrays;
 你可以假设 k 总是有效的，且 1 ≤ k ≤ 数组的长度。
  */
 public class Solution {
-    public int findKthLargest(int[] nums, int k) {
+    /**
+     *  排序
+     */
+    public int findKthLargest_sort(int[] nums, int k) {
         if (nums == null || nums.length == 0 || k < 1 || k > nums.length) {
             return 0;
         }
@@ -26,4 +32,27 @@ public class Solution {
         Arrays.sort(nums);
        return nums[nums.length - k];
     }
+
+    /**
+     * 使用堆
+     */
+    public int findKthLargest(int[] nums, int k) {
+        if (nums == null || nums.length == 0 || k < 1 || k > nums.length) {
+            return 0;
+        }
+
+        Queue<Integer> heap = new PriorityQueue<>(k, Comparator.comparingInt(a -> a));
+        for (int i = 0; i < k; i++) {
+            heap.offer(nums[i]);
+        }
+        for (int i = k; i < nums.length; i++) {
+            if (nums[i] > heap.peek()) {
+                heap.poll();
+                heap.offer(nums[i]);
+            }
+        }
+
+        return heap.poll();
+    }
+
 }

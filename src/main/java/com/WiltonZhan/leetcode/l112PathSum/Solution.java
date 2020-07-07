@@ -2,6 +2,7 @@ package com.WiltonZhan.leetcode.l112PathSum;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Stack;
 
 /*
 112. 路径总和
@@ -32,7 +33,7 @@ public class Solution {
     /**
      * 递归
      */
-    public boolean hasPathSum(TreeNode root, int sum) {
+    public boolean hasPathSum_recurse(TreeNode root, int sum) {
         if (root == null) {
             return false;
         }
@@ -40,5 +41,40 @@ public class Solution {
             return root.val == sum;
         }
         return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
+    }
+
+    /**
+     * 使用栈进行二叉树的深度优先遍历：
+     *  1. 根节点入栈
+     *  2. 从栈中弹出一个节点（遍历这个元素）并依次将其右孩子和左孩子入栈
+     *  3. 重复这个过程直到栈为空
+     *
+     * 这里需要用到两个栈，一个栈存储节点，一个栈存储“路径和”。两个栈需要同步修改
+     */
+    public boolean hasPathSum(TreeNode root, int sum) {
+        if (root == null) {
+            return false;
+        }
+        Stack<TreeNode> nodeStack = new Stack<>();
+        Stack<Integer> valueStack = new Stack<>();
+        nodeStack.push(root);
+        valueStack.push(sum - root.val);
+        while (!nodeStack.isEmpty()) {
+            TreeNode node = nodeStack.pop();
+            int value = valueStack.pop();
+            if (node.left == null && node.right == null && value == 0) {
+                return true;
+            } else {
+                if (node.right != null) {
+                    nodeStack.push(node.right);
+                    valueStack.push(value - node.right.val);
+                }
+                if (node.left != null) {
+                    nodeStack.push(node.left);
+                    valueStack.push(value - node.left.val);
+                }
+            }
+        }
+        return false;
     }
 }

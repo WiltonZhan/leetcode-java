@@ -119,6 +119,9 @@ public class Solution {
                 break;
             }
         }
+        if (count == 3) {
+            return true;
+        }
 
         for (int i = 0; i < 3; i++) {
             if (board[2 - i][i] == c) {

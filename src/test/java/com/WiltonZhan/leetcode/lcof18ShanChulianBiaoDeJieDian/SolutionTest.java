@@ -1,9 +1,9 @@
-package com.WiltonZhan.leetcode.lcof18ShanChuDianBiaoDeJieDian;
+package com.WiltonZhan.leetcode.lcof18ShanChulianBiaoDeJieDian;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import com.WiltonZhan.leetcode.lcof18ShanChuDianBiaoDeJieDian.Solution.ListNode;
+import com.WiltonZhan.leetcode.lcof18ShanChulianBiaoDeJieDian.Solution.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;

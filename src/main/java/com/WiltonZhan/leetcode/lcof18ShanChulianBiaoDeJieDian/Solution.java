@@ -1,4 +1,4 @@
-package com.WiltonZhan.leetcode.lcof18ShanChuDianBiaoDeJieDian;
+package com.WiltonZhan.leetcode.lcof18ShanChulianBiaoDeJieDian;
 
 /*
 剑指 Offer 18. 删除链表的节点
